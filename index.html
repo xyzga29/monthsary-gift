@@ -1,100 +1,108 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You ❤️</title>
-
-<style>
-body{
+<title>For Putri ❤️</title><style>
+*{
 margin:0;
-background:#111;
-color:white;
-font-family:Arial,sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-overflow:hidden;
+padding:0;
+box-sizing:border-box;
+font-family:'Arial',sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#ffd6e7,#fff0f5);
+overflow-x:hidden;
+text-align:center;
+color:#d63384;
 }
 
 .container{
-text-align:center;
-padding:20px;
+padding:30px 20px;
 }
 
 h1{
+margin-top:20px;
 font-size:2.5rem;
-color:pink;
+}
+
+.subtitle{
+margin-top:10px;
+font-size:1rem;
+}
+
+.gallery img{
+width:90%;
+max-width:320px;
+border-radius:20px;
+margin:15px 0;
+box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 button{
+margin-top:20px;
 padding:15px 30px;
-font-size:18px;
 border:none;
 border-radius:30px;
-background:pink;
+background:#ff69b4;
 color:white;
-cursor:pointer;
+font-size:18px;
 }
 
 #letter{
 display:none;
+background:white;
+padding:20px;
+border-radius:20px;
 margin-top:20px;
-font-size:18px;
+color:#444;
 line-height:1.8;
 }
 
-.heart{
-position:absolute;
-color:pink;
-animation:fall 5s linear infinite;
+.flower{
+position:fixed;
+top:-20px;
+font-size:24px;
+animation:fall linear infinite;
 }
 
 @keyframes fall{
-0%{
-transform:translateY(-100px);
+0%{transform:translateY(-100px);}
+100%{transform:translateY(110vh);}
 }
-100%{
-transform:translateY(100vh);
-}
-}
-</style>
-</head>
+</style></head><body><div class="container"><h1>Putri Handayani ❤️</h1><p class="subtitle">
+A little website made with love 🌸
+</p><div class="gallery">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+</div><button onclick="openLetter()">
+Buka Pesan 💌
+</button><div id="letter">Haiii cantik ❤️<br><br>
 
-<body>
+Makasih yaaa udah hadir di hidupku.
+Aku seneng banget bisa kenal kamu lebih deket dan lebih lebih deket.
 
-<div class="container">
-<h1>For You ❤️</h1>
+Karena kita dulu selama 3 tahun hanya cuma temen biasa dan nggak ada perasaan apapun, hanya saling kenal nama.
 
-<button onclick="openLetter()">
-Open My Letter
-</button>
+Tapi ternyata waktu punya caranya sendiri buat mempertemukan kita lebih dekat dari sebelumnya.
 
-<div id="letter">
-<p>
-Terima kasih sudah hadir dalam hidupku. ❤️<br><br>
-Semoga kita selalu diberi kebahagiaan, kesehatan, dan banyak cerita indah bersama.
-<br><br>
-I Love You 🌸
-</p>
-</div>
-</div>
+Terima kasih sudah hadir, sudah bertahan, dan sudah menjadi bagian dari cerita hidupku.
 
-<script>
+I Love You ❤️🌸
+
+</div></div><script>
 function openLetter(){
 document.getElementById("letter").style.display="block";
 }
 
-for(let i=0;i<25;i++){
-let heart=document.createElement("div");
-heart.innerHTML="❤️";
-heart.className="heart";
-heart.style.left=Math.random()*100+"vw";
-heart.style.animationDuration=(Math.random()*3+2)+"s";
-document.body.appendChild(heart);
+for(let i=0;i<40;i++){
+let flower=document.createElement("div");
+flower.innerHTML="🌸";
+flower.className="flower";
+flower.style.left=Math.random()*100+"vw";
+flower.style.animationDuration=(Math.random()*5+4)+"s";
+document.body.appendChild(flower);
 }
-</script>
-
-</body>
+</script></body>
 </html>
