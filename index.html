@@ -2,61 +2,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Putri ❤️</title><style>
+<title>Putri Handayani ❤️</title><style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Arial',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(180deg,#ffd6e7,#fff0f5);
-overflow-x:hidden;
+background:linear-gradient(to bottom,#ffd6e7,#fff5fa);
 text-align:center;
-color:#d63384;
+overflow-x:hidden;
+color:#ff4f8b;
 }
 
 .container{
-padding:30px 20px;
+padding:20px;
 }
 
 h1{
-margin-top:20px;
+margin-top:30px;
 font-size:2.5rem;
+animation:fade 2s;
 }
 
 .subtitle{
 margin-top:10px;
-font-size:1rem;
+color:#666;
+}
+
+.gallery{
+margin-top:25px;
 }
 
 .gallery img{
 width:90%;
 max-width:320px;
 border-radius:20px;
-margin:15px 0;
-box-shadow:0 4px 15px rgba(0,0,0,.15);
+margin:12px;
+box-shadow:0 4px 20px rgba(0,0,0,.15);
 }
 
 button{
+padding:14px 28px;
 margin-top:20px;
-padding:15px 30px;
 border:none;
 border-radius:30px;
 background:#ff69b4;
 color:white;
-font-size:18px;
+font-size:17px;
+cursor:pointer;
 }
 
 #letter{
 display:none;
+margin-top:25px;
 background:white;
-padding:20px;
+padding:25px;
 border-radius:20px;
-margin-top:20px;
-color:#444;
+box-shadow:0 4px 15px rgba(0,0,0,.1);
 line-height:1.8;
+color:#555;
 }
 
 .flower{
@@ -70,33 +77,50 @@ animation:fall linear infinite;
 0%{transform:translateY(-100px);}
 100%{transform:translateY(110vh);}
 }
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
 </style></head><body><div class="container"><h1>Putri Handayani ❤️</h1><p class="subtitle">
 A little website made with love 🌸
 </p><div class="gallery">
 <img src="IMG_8183.jpeg">
 <img src="IMG_8446.jpeg">
 <img src="IMG_8618.jpeg">
-</div><button onclick="openLetter()">
-Buka Pesan 💌
-</button><div id="letter">Haiii cantik ❤️<br><br>
+</div><button onclick="showLetter()">
+💌 Buka Pesan
+</button><br><a href="https://www.youtube.com/results?search_query=Favorite+Girl+Justin+Bieber" target="_blank">
+<button>
+<a href="https://www.youtube.com/results?search_query=Justin+Bieber+Favorite+Girl" target="_blank">
+  🎵 Putar Lagu
+</a>
+</button>
+</a><div id="letter">Haiii cantik ❤️
+
+<br><br>
 
 Makasih yaaa udah hadir di hidupku.
+
 Aku seneng banget bisa kenal kamu lebih deket dan lebih lebih deket.
 
-Karena kita dulu selama 3 tahun hanya cuma temen biasa dan nggak ada perasaan apapun, hanya saling kenal nama.
+Karena kita dulu selama 3 tahun cuma temen biasa dan nggak ada perasaan apapun, cuma saling kenal nama.
 
 Tapi ternyata waktu punya caranya sendiri buat mempertemukan kita lebih dekat dari sebelumnya.
 
-Terima kasih sudah hadir, sudah bertahan, dan sudah menjadi bagian dari cerita hidupku.
+Aku bersyukur bisa kenal kamu lebih jauh, bisa ngobrol sama kamu, dan bisa punya banyak cerita bareng kamu.
 
-I Love You ❤️🌸
+Terima kasih sudah hadir di hidupku.
+
+I Love You, Putri Handayani ❤️🌸
 
 </div></div><script>
-function openLetter(){
+
+function showLetter(){
 document.getElementById("letter").style.display="block";
 }
 
-for(let i=0;i<40;i++){
+for(let i=0;i<50;i++){
 let flower=document.createElement("div");
 flower.innerHTML="🌸";
 flower.className="flower";
@@ -104,5 +128,6 @@ flower.style.left=Math.random()*100+"vw";
 flower.style.animationDuration=(Math.random()*5+4)+"s";
 document.body.appendChild(flower);
 }
+
 </script></body>
 </html>
