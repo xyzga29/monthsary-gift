@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<style>
+body{
+margin:0;
+background:#111;
+color:white;
+font-family:Arial,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+padding:20px;
+}
+
+h1{
+font-size:2.5rem;
+color:pink;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:pink;
+color:white;
+cursor:pointer;
+}
+
+#letter{
+display:none;
+margin-top:20px;
+font-size:18px;
+line-height:1.8;
+}
+
+.heart{
+position:absolute;
+color:pink;
+animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px);
+}
+100%{
+transform:translateY(100vh);
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>For You ❤️</h1>
+
+<button onclick="openLetter()">
+Open My Letter
+</button>
+
+<div id="letter">
+<p>
+Terima kasih sudah hadir dalam hidupku. ❤️<br><br>
+Semoga kita selalu diberi kebahagiaan, kesehatan, dan banyak cerita indah bersama.
+<br><br>
+I Love You 🌸
+</p>
+</div>
+</div>
+
+<script>
+function openLetter(){
+document.getElementById("letter").style.display="block";
+}
+
+for(let i=0;i<25;i++){
+let heart=document.createElement("div");
+heart.innerHTML="❤️";
+heart.className="heart";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
