@@ -127,5 +127,23 @@ flower.style.animationDuration=(Math.random()*5+4)+"s";
 document.body.appendChild(flower);
 }
 
-</script></body>
+</script>
+
+<audio id="music" autoplay loop>
+  <source src="Justin Bieber - Favorite Girl (Lyrics).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("load", () => {
+  const music = document.getElementById("music");
+
+  music.play().catch(() => {
+    document.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+  });
+});
+</script>
+  
+</body>
 </html>
